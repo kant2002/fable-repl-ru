@@ -103,7 +103,7 @@
     },
     {
         "type": "category",
-        "label": "Learn",
+        "label": "Обучение",
         "children": [
             {
                 "type": "sub-category",
@@ -116,7 +116,7 @@
                     },
                     {
                         "type": "menu-item",
-                        "label": "Primitive Types",
+                        "label": "Примитивные типы",
                         "fsharpCode": "tour/primitives.fs"
                     },
                     {

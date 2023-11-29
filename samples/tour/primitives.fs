@@ -1,64 +1,64 @@
-module Tour.Primitives
+модуль Тур.Примитивы
 
 // From https://docs.microsoft.com/en-us/dotnet/fsharp/tour
 // Visit the link above for more information on each topic
 // You can also find more learning resources at https://fsharp.org/
 
-module IntegersAndNumbers =
+модуль ЦелыеИЧисла =
 
-    /// This is a sample integer.
-    let sampleInteger = 176
+    /// Это пример целого числа.
+    пусть примерЦелого = 176
 
-    /// This is a sample floating point number.
-    let sampleDouble = 4.1
+    /// Это пример числа с плавающей точкой.
+    пусть примерЧислаСДвойнойТочностью = 4.1
 
-    /// This computed a new number by some arithmetic.  Numeric types are converted using
-    /// functions 'int', 'double' and so on.
-    let sampleInteger2 = (sampleInteger/4 + 5 - 7) * 4 + int sampleDouble
+    /// Эта строка вычисляет новое число с помощью арифметических действий.  Числовые типы конвертируются используя
+    /// функции 'int', 'double' и так далее.
+    пусть примерЦелого2 = (примерЦелого/4 + 5 - 7) * 4 + int примерЧислаСДвойнойТочностью
 
-    /// This is a list of the numbers from 0 to 99.
-    let sampleNumbers = [ 0 .. 99 ]
+    /// Это список чисел от 0 до 99.
+    пусть примерЧисел = [ 0 .. 99 ]
 
-    /// This is a list of all tuples containing all the numbers from 0 to 99 and their squares.
-    let sampleTableOfSquares = [ for i in 0 .. 99 -> (i, i*i) ]
+    /// Это список всех пар содержащий все числа от 0 до 99 и их квадраты.
+    пусть примерТаблицыКвадратов = [ для ц в 0 .. 99 -> (ц, ц*ц) ]
 
-    // The next line prints a list that includes tuples, using '%A' for generic printing.
-    printfn $"The table of squares from 0 to 99 is:\n{sampleTableOfSquares}"
-
-
-module Booleans =
-
-    /// Booleans values are 'true' and 'false'.
-    let boolean1 = true
-    let boolean2 = false
-
-    /// Operators on booleans are 'not', '&&' and '||'.
-    let boolean3 = not boolean1 && (boolean2 || false)
-
-    // This line uses '%b'to print a boolean value.  This is type-safe.
-    printfn $"The expression 'not boolean1 && (boolean2 || false)' is %b{boolean3}"
+    // Следующая линия печатает список который включает пары, используя '%A' для обобщенного парсинга.
+    printfn $"Таблица квадратов  от 0 до 99 is:\n{примерТаблицыКвадратов}"
 
 
-module StringManipulation =
+модуль Логические =
 
-    /// Strings use double quotes.
-    let string1 = "Hello"
-    let string2  = "world"
+    /// Логические значения это 'истина' и 'ложь'.
+    пусть логическое1 = истина
+    пусть логическое2 = ложь
 
-    /// Strings can also use @ to create a verbatim string literal.
-    /// This will ignore escape characters such as '\', '\n', '\t', etc.
-    let string3 = @"C:\Program Files\"
+    /// Операторы на логических типах это 'not', '&&' и '||'.
+    пусть логическое3 = not логическое1 && (логическое2 || ложь)
 
-    /// String literals can also use triple-quotes.
-    let string4 = """The computer said "hello world" when I told it to!"""
+    // Данная строка использует '%b' для печати логического значения.  Это типо-безопасно.
+    printfn $"Выражение 'not логическое1 && (логическое2 || false)' равно %b{логическое3}"
 
-    /// String concatenation is normally done with the '+' operator.
-    let helloWorld = string1 + " " + string2
 
-    // This line uses '%s' to print a string value.  This is type-safe.
-    printfn "%s" helloWorld
+модуль МанипуляцииСтроками =
 
-    /// Substrings use the indexer notation.  This line extracts the first 7 characters as a substring.
-    /// Note that like many languages, Strings are zero-indexed in F#.
-    let substring = helloWorld.[0..6]
-    printfn "%s" substring
+    /// Строки используют двойные кавычки.
+    пусть строка1 = "Привет"
+    пусть строка2  = "мир"
+
+    /// Строки также могут использовать @ для создания дословного строкого литерала.
+    /// Она будет игнорировать escape-символы такие как '\', '\n', '\t', и т.д.
+    пусть строка3 = @"C:\Program Files\"
+
+    /// Строковые литерали также могут использовать тройные кавычки.
+    пусть строка4 = """Компьютер сказал "Привет мир" когда я ему сказал!"""
+
+    /// Связывание строк обычно делается с помощью оператора '+'.
+    пусть приветМир = строка1 + " " + строка2
+
+    // Эта строка использует '%s' для печати строкового значения.  Это типо-безопасно.
+    printfn "%s" приветМир
+
+    /// Подстроки используют нотацию индексатора.  Данная строка извлекает первые 7 символов как подстроку.
+    /// Обратите внимание что как многие языки, Строки начинают индексироватся с нуля в F#.
+    пусть подстрока = приветМир.[0..6]
+    printfn "%s" подстрока
